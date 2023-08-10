@@ -1,6 +1,6 @@
 #include<stdio.h>
 /**
- * main - Program printing with puts
+ * main - Program printing puts
  *
  * Return: Always 0 (Success)
  */
