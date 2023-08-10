@@ -2,7 +2,7 @@
 /**
  * main - Program printing with puts
  *
- * Return: Always  0 (Success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
