@@ -16,16 +16,21 @@ int n;
 srand(time(0));
 n = rand() - RAND_MAX / 2;
 
-if ((n % 9) > 5)
+int last_digit = n % 10;
+
+printf("Last digit of %d is %d", n, last_digit);
+
+if (last_digit > 5)
 {
-printf("Last digit of %d is %d and greater than 5\n", n, n % 9);
+printf(" and is greater than 5\n");
 }
-else if ((n % 9) < 6 && (n % 9) != 0)
-printf("Last digit of %d is %d and is less than 6 and not 0\n", n, n % 9);
+else if (last_digit == 0)
+{
+printf(" and is 0\n");
 }
 else
 {
-printf("Last digit of %d and is %d and is 0\n", n, n % 9);
+printf(" and is less than 6 and not 0\n");
 }
 return (0);
 }
