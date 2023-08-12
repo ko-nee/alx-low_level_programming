@@ -1,20 +1,29 @@
 #include <stdio.h>
 
 /**
- *main-entry point
- *Description: This function prints the alphabet in lowercase,
- *and then in upper case
+ * main - Entry point
  *
- *Return: Always 0 (Success)
+ * Description: This program prints the alphabet in lowercase,
+ * followed by the alphabet in uppercase
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-char alp[52] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+char lowercase = 'a';
+char uppercase = 'A';
 int i;
-for (i = 0; i < 52; i++)
+
+for (i = 0; i < 26; i++)
 {
-putchar(alp[i]);
+putchar(lowercase);
+lowercase++;
 }
-putchar("\n");
+for (i = 0; i < 26; i++)
+{
+putchar(uppercase);
+uppercase++;
+}
+putchar('\n');
 return (0);
 }
