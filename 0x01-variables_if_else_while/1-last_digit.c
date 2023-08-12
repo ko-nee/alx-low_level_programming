@@ -2,10 +2,10 @@
 #include <time.h>
 #include <stdio.h>
 /**
- *main-entry point
+ * main - entry point
  *
- *Description: This is the main function that prints the last digit of
- *the number stored in the variable n
+ * Description: This is the main function that prints the last digit of
+ * the number stored in the variable n
  *
  * Return: 0 (Sucess)
  */
