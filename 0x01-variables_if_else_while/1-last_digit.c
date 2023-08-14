@@ -4,8 +4,8 @@
 
 /**
  * main - entry point 
- * Description - print whether the number stored 
- * in the variable n is positive or negative 
+ * Description - print whether the number stored
+ * in the variable n is positive or negative
  *
  * Result =  0 (Success)
  */
@@ -15,7 +15,6 @@ int n;
 
 srand(time(0));
 n = rand() - RAND_MAX / 2;
-int lastDigit = n % 10
 
 printf("The last digit of %d is %d ", n, lastDigit);
 if (lastDigit > 5)
