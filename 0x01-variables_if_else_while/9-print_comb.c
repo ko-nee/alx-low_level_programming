@@ -22,7 +22,6 @@ if (num1 != 9 || num2 != 9)
 if (!(num1 == 8 && num2 == 9))
 {
 putchar(',');
-putchar(' ');
 }
 }
 }
