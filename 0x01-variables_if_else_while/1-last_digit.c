@@ -3,7 +3,7 @@
 #include <time.h>
 
 /**
- * main - entry point 
+ * main - Entry point 
  * Description - print whether the number stored
  * in the variable n is positive or negative
  *
@@ -11,12 +11,11 @@
  */
 int main(void)
 {
-int lastDigit = n % 10
 
 srand(time(0));
 n = rand() - RAND_MAX / 2;
 
-printf("The last digit of %d is %d ", n, lastDigit);
+printf("The last digit of %d is %d ", n);
 if (lastDigit > 5)
 {
 printf("and is greater than 5\n");
