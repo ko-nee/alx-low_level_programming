@@ -6,5 +6,5 @@ int main(void)
 	printf("Array elements: ");
 	print_array(numbers, num_elements);
 
-	return 0;
+	return (0);
 }
