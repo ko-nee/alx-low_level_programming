@@ -1,3 +1,12 @@
+#include <stdio.h>
+#include "main.h"
+
+/**
+ *print_array - a function that prints elements of an array of integers 
+ *
+ *Return: 0
+ */
+
 int main(void)
 {
 	int numbers[] = {1, 2, 3, 4, 5};
