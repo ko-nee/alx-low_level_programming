@@ -12,10 +12,13 @@ bool is_separator(char c)
 {
 	char separators[] = " \t\n,;.!?\"(){}";
 
-	for (int i = 0; separators[i] != '\0'; i++)
+	int = 0;
+
+	while (separators[i] != '\0')
 	{
 	if (c == separators[i])
 	return (true);
+	i++;
 	}
 	return (false);
 }
