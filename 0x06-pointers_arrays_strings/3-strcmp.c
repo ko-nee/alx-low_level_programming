@@ -2,11 +2,12 @@
 #include "main.h"
 
 /**
- * _strcmp - Compares two strings
- * @s1: first string
- * @s2: second tring
+ * _strcmp - Compares two strings.
+ * @s1: The first string.
+ * @s2: The second string.
  *
- * Return: An integer less than, equal to or greater than zero
+ * Return: An integer less than, equal to, or greater than zero if s1 is found,
+ * respectively, to be less than, to match, or be greater than s2.
  */
 
 int _strcmp(char *s1, char *s2)
@@ -24,8 +25,8 @@ int _strcmp(char *s1, char *s2)
 
 int main(void)
 {
-	char str1[] = "apples";
-	char str2[] = "oranges";
+	char str1[] = "apple";
+	char str2[] = "banana";
 
 	int result = _strcmp(str1, str2);
 
@@ -38,4 +39,3 @@ int main(void)
 
 	return (0);
 }
-
