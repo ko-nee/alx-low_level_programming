@@ -1,38 +1,42 @@
 #include "main.h"
 
+int confirm_prime(int n, int x);
+
 /**
  * is_prime_number - Checks if a number is prime.
  * @n: The input number.
+ *
  * Return: 1 if n is prime, 0 otherwise.
  */
+
 int is_prime_number(int n)
 {
-    return check_prime(n, 2); /* Helper function to check if n is prime */
+	return (confirm_prime(n, 2));
 }
 
 /**
- * check_prime - Recursive helper function to check if a number is prime.
+ * confirm_prime - Recursive helper function to confirm if a number is prime.
  * @n: The input number.
- * @divisor: The current divisor to check.
+ * @x: The current divisor to check.
  * Return: 1 if n is prime, 0 otherwise.
  */
-int check_prime(int n, int divisor)
-{
-    if (n <= 1) /* Base case: n is not prime */
-    {
-        return 0;
-    }
-    else if (divisor >= n) /* Base case: checked all divisors */
-    {
-        return 1;
-    }
-    else if (n % divisor == 0) /* n is divisible by divisor, not prime */
-    {
-        return 0;
-    }
-    else
-    {
-        return check_prime(n, divisor + 1); /* Recursive search for divisors */
-    }
-}
 
+int confirm_prime(int n, int x)
+{
+	if (n <= 1)
+	{
+	return (0);
+	}
+	else if (x >= n)
+	{
+	return (1);
+	}
+	else if (n % x == 0)
+	{
+	return (0);
+	}
+	else
+	{
+	return (confirm_prime(n, x + 1));
+	}
+}
