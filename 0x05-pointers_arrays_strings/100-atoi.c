@@ -14,7 +14,7 @@ int _atoi(char *s)
 	int n = 0;
 	int sign = 1;
 
- 	while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n' ||
+	while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n' ||
 	s[i] == '+' || s[i] == '-')
 	{
 	if (s[i] == '-')
@@ -22,7 +22,7 @@ int _atoi(char *s)
 	sign = -sign;
 	}
 	i++;
-	
+
 	}
 	while (s[i] >= '0' && s[i] <= '9')
 	{
