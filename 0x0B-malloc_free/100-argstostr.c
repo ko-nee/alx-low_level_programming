@@ -18,29 +18,24 @@ char *argstostr(int ac, char **av)
 	int len;
 	int total_len;
 	char *concatenated;
-	int concat_index;	
+	int concat_index;
 
 	if (ac == 0 || av == NULL)
-	{
 	return (NULL);
-	}
 
 	total_len = 0;
 
 	for (i = 0; i < ac; i++)
 	{
 	if (av[i] != NULL)
-		{	
+		{
 		total_len += strlen(av[i]) + 1;
 		}
 	}
-
 	concatenated = malloc(total_len + 1);
 
 	if (concatenated == NULL)
-	{
 	return (NULL);
-	}
 
 	concat_index = 0;
 
