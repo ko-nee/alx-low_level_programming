@@ -16,23 +16,23 @@ int count_words(char *str)
 	int count = 0;
 	int is_word = 0;
 
-    for (i = 0; str[i] != '\0'; i++)
-    {
-        if (str[i] != ' ')
-        {
-            if (is_word == 0)
-            {
-                count++;
-                is_word = 1;
-            }
-        }
-        else
-        {
-            is_word = 0;
-        }
-    }
+	for (i = 0; str[i] != '\0'; i++)
+	{
+	if (str[i] != ' ')
+	{
+	if (is_word == 0)
+		{
+		count++;
+		is_word = 1;
+		}
+	}
+	else
+	{
+	is_word = 0;
+	}
+	}
 
-    return (count);
+	return (count);
 }
 
 /**
@@ -53,57 +53,56 @@ char **strtow(char *str)
 	char **words;
 
 	if (str == NULL || *str == '\0')
-    {
-        return (NULL);
-    }
+	{
+	return (NULL);
+	}
 
-    num_words = count_words(str);
+	num_words = count_words(str);
 
-    if (num_words == 0)
-    {
-        return (NULL);
-    }
+	if (num_words == 0)
+	{
+	return (NULL);
+	}
 
-    words = malloc((num_words + 1) * sizeof(char *));
+	words = malloc((num_words + 1) * sizeof(char *));
 
-    if (words == NULL)
-    {
-        return (NULL);
-    }
+	if (words == NULL)
+	{
+	return (NULL);
+	}
 
-    for (i = 0; str[i] != '\0'; i++)
-    {
-        if (str[i] != ' ')
-        {
-            if (word_start == 0)
-            {
-                word_start = i;
-            }
-        }
-        else
-        {
-            if (word_start != 0)
-            {
-                word_len = i - word_start;
-                words[word_index] = malloc((word_len + 1) * sizeof(char));
-                if (words[word_index] == NULL)
-                {
+	for (i = 0; str[i] != '\0'; i++)
+	{
+	if (str[i] != ' ')
+	{
+	if (word_start == 0)
+	{
+	word_start = i;
+	}
+	}
+	else
+	{
+	if (word_start != 0)
+	{
+		word_len = i - word_start;
+		words[word_index] = malloc((word_len + 1) * sizeof(char));
+	if (words[word_index] == NULL)
+	{
 
-                    for (j = 0; j < word_index; j++)
-                    {
-                        free(words[j]);
-                    }
-                    free(words);
-                    return (NULL);
-                }
-                strncpy(words[word_index], str + word_start, word_len);
-                words[word_index][word_len] = '\0';
-                word_index++;
-                word_start = 0;
-            }
-        }
-    }
-
+		for (j = 0; j < word_index; j++)
+		{
+			free(words[j]);
+		}
+		free(words);
+			return (NULL);
+			}
+		strncpy(words[word_index], str + word_start, word_len);
+		words[word_index][word_len] = '\0';
+		word_index++;
+		word_start = 0;
+		}
+	}
+}
 	if (word_start != 0)
 	{
 	word_len = strlen(str) - word_start;
