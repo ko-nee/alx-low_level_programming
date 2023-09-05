@@ -7,8 +7,7 @@
  * @size: array size
  * @c: char to initialize the array
  *
- * Return: 	Success, point to array
- * 		Failure, NULL
+ * Return: Success, point to array.Failure, NULL
  */
 
 char *create_array(unsigned int size, char c)
