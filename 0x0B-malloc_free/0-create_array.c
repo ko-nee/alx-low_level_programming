@@ -5,9 +5,10 @@
 /**
  * create_array - create an array of chars
  * @size: array size
- * @array: char to assign
+ * @c: char to initialize the array
  *
- * Return: Point to array, or NULL if fails
+ * Return: 	Success, point to array
+ * 		Failure, NULL
  */
 
 char *create_array(unsigned int size, char c)
