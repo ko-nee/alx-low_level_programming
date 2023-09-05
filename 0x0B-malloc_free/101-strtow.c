@@ -56,7 +56,7 @@ char **strtow(char *str)
         return (NULL);
     }
 
-    int num_words = count_words(str);
+    num_words = count_words(str);
 
     if (num_words == 0)
     {
@@ -88,7 +88,7 @@ char **strtow(char *str)
                 if (words[word_index] == NULL)
                 {
 
-                    for (int j = 0; j < word_index; j++)
+                    for (j = 0; j < word_index; j++)
                     {
                         free(words[j]);
                     }
