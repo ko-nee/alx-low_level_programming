@@ -49,6 +49,7 @@ char **strtow(char *str)
 	int word_len;
 	int word_index = 0;
 	int word_start = 0;
+	int num_words;
 	char **words;
 
 	if (str == NULL || *str == '\0')
