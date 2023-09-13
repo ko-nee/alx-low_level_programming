@@ -2,13 +2,11 @@
 #define DOG_H
 
 /**
- * struct dog - initilizes variables of type struct dog
- * @d: initialize pointer to struct dog
- * @name: a pointer to a char to store the dog's name.
- * @age : is a float to store the dog's age
- * @owner: is a pointer to a char to store the owner's name.
+ * struct dog - Represents a dog
+ * @name: Name of the dog
+ * @age: Age of the dog
+ * @owner: Owner of the dog
  */
-
 
 struct dog
 {
