@@ -4,55 +4,64 @@
 #include "dog.h"
 
 /**
- * new_dog - Creates a new dog
- * @name: Pointer to the name of the dog
- * @age: Age of the dog
- * @owner: Pointer to the owner's name
- *
- * Return: Pointer to the newly created dog_t structure, or NULL 
+ * _strlen - Calculate the length of a string.
+ * This function calculates the length of the input string 's' by
+ * counting the number of characters until the null terminator '\0' is
+ * encountered.
+ * @s: The input string.
+ * Return: The length of the string 's'.
  */
 
 int _strlen(char *s)
 {
-    int i = 0;
-    while (s[i] != '\0')
-    {
-        i++;
-    }
-    return (i);
+	int i = 0;
+
+	while (s[i] != '\0')
+
+	{
+	i++;
+	}
+	return (i);
 }
+
+ /**
+ * new_dog - Creates a new dog structure and initializes its fields
+ * @name: Pointer to the name of the dog
+ * @age: Age of the dog
+ * @owner: Pointer to the owner's name
+ * Return: Pointer to the newly created dog_t structure, or NULL
+ */
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-    dog_t *new_dog_ptr;
-    int len1;
+	dog_t *new_dog_ptr;
+	int len1;
 
-    len1 = _strlen(name);
+	len1 = _strlen(name);
 
-    new_dog_ptr = malloc(sizeof(dog_t));
-    if (new_dog_ptr == NULL)
-        return (NULL);
+	new_dog_ptr = malloc(sizeof(dog_t));
+	if (new_dog_ptr == NULL)
+	return (NULL);
 
-    new_dog_ptr->name = malloc(sizeof(char) * (len1 + 1));
-    if (new_dog_ptr->name == NULL)
-    {
-        free(new_dog_ptr);
-        return (NULL);
-    }
+	new_dog_ptr->name = malloc(sizeof(char) * (len1 + 1));
+	if (new_dog_ptr->name == NULL)
+	{
+	free(new_dog_ptr);
+	return (NULL);
+	}
 
-    strcpy(new_dog_ptr->name, name);
-    new_dog_ptr->age = age;
+	strcpy(new_dog_ptr->name, name);
+	new_dog_ptr->age = age;
 
-    new_dog_ptr->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
-    if (new_dog_ptr->owner == NULL)
-    {
-        free(new_dog_ptr->name);
-        free(new_dog_ptr);
-        return (NULL);
-    }
+	new_dog_ptr->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
+	if (new_dog_ptr->owner == NULL)
+	{
+	free(new_dog_ptr->name);
+	free(new_dog_ptr);
+	return (NULL);
+	}
 
-    strcpy(new_dog_ptr->owner, owner);
+	strcpy(new_dog_ptr->owner, owner);
 
-    return (new_dog_ptr);
+	return (new_dog_ptr);
 }
-
