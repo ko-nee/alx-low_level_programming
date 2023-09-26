@@ -5,10 +5,8 @@
 
 /**
  * _strlen - Calculate the length of a string.
- * This function calculates the length of the input string 's' by
- * counting the number of characters until the null terminator '\0' is
- * encountered.
- * @s: The input string.
+ *
+ * @s: The input string to evaluate
  * Return: The length of the string 's'.
  */
 
@@ -24,8 +22,37 @@ int _strlen(char *s)
 	return (i);
 }
 
+/**
+ * *_strcpy - copies the string pointed to by src
+ * including the terminating null byte (\0)
+ * to the buffer pointed to by dest
+ * @dest: pointer to the buffer in which we copy the string
+ * @src: string to be copied
+ *
+ * Return: the pointer to dest
+ */
+char *_strcpy(char *dest, char *src)
+{
+	int len, i;
+
+	len = 0;
+
+	while (src[len] != '\0')
+	{
+		len++;
+	}
+
+	for (i = 0; i < len; i++)
+	{
+		dest[i] = src[i];
+	}
+	dest[i] = '\0';
+
+	return (dest);
+}
+
  /**
- * new_dog - Creates a new dog structure and initializes its fields
+ * new_dog - Creates a new dog structure
  * @name: Pointer to the name of the dog
  * @age: Age of the dog
  * @owner: Pointer to the owner's name
